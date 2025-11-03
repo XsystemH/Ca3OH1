@@ -215,7 +215,7 @@ class HOCollisionLoss(nn.Module):
 
             object_vertices_centered = (object_vertices[b_idx] - person_bbox_center) / person_bbox_scale
             object_vertices_grid = object_vertices_centered.view(1, -1, 1, 1, 3)
-            phi_val = nn.functional.grid_sample(phi.unsqueeze(1), object_vertices_grid).view(-1)
+            phi_val = nn.functional.grid_sample(phi.unsqueeze(1), object_vertices_grid, align_corners=True).view(-1)
             phi_val.retain_grad()
             cur_loss = phi_val
             if self.robustifier:

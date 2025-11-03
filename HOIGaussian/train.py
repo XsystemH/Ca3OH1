@@ -37,7 +37,7 @@ import smplx
 import open3d as o3d
 import random
 import json
-from scipy.ndimage.morphology import distance_transform_edt
+from scipy.ndimage import distance_transform_edt
 
 try:
     from torch.utils.tensorboard import SummaryWriter
@@ -285,10 +285,15 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations,
             for name, param in gaussians.get_named_parameters().items():
                 if ((name == 'scale_obj') or (name == 'x_angle') or (name == 'y_angle') or (name == 'z_angle')):
                     param.grad = None
+            
+            # Render and save images at iteration 159
             if iteration == 159:
+                bkgd_mask = viewpoint_cam.bkgd_mask.cuda()
+                bkgd_mask_o = viewpoint_cam.bkgd_mask_o.cuda()
+                bkgd_mask_h = viewpoint_cam.bkgd_mask_h.cuda()
+                visualize_imgs(render_pkg, viewpoint_cam, bkgd_mask, bkgd_mask_o, bkgd_mask_h)
                 object_path=f'{args.data_path}/{dataset.file_name}/'
                 save_result_hoi(save_dir, h_pose, obj_pose, object_path)
-                return
 
         # end time
         end_time = time.time()
