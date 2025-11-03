@@ -1,4 +1,7 @@
-# ninja log v6
-1	10533	1749303049111624245	/data/boran/3dhoi/open-3dhoi/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o	f7f7079777102eea
-0	14069	1749303049110624245	/data/boran/3dhoi/open-3dhoi/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o	e8e44181540a79d7
-1	48803	1749303049111624245	/data/boran/3dhoi/open-3dhoi/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o	3083e37eed817d0
+# ninja log v7
+2	7348	1762155404428005266	/home/xhsystem/Code/Term7/Ca3OH1/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o	3d7e0e1ffeccf1ea
+2	11767	1762155404428005266	/home/xhsystem/Code/Term7/Ca3OH1/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o	6d11185915a1a316
+3	42074	1762155404431980024	/home/xhsystem/Code/Term7/Ca3OH1/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o	4f7a60b918e68a03
+12	8212	1762161024736036293	/home/xhsystem/Code/Term7/Ca3OH1/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o	81aeab3555a22219
+12	15227	1762161024736036293	/home/xhsystem/Code/Term7/Ca3OH1/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o	17d1049fa3cde596
+12	96540	1762161024736036293	/home/xhsystem/Code/Term7/Ca3OH1/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o	29a5c9256cd1639f
